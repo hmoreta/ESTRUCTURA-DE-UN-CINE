@@ -3,7 +3,7 @@ struct EntradaCine
 {
     char Cliente[100];
     char Pelicula[100];
-    char Duracion[20];
+    char HORA[20];
     int Puesto;
     char Comida[100];
     float Costo;
@@ -17,9 +17,9 @@ void LlenarInformacion (struct EntradaCine *InfCliente)
        printf("Pelicula que desea mirar: ");
        fflush(stdin);
        gets(&(*InfCliente).Pelicula);
-       printf("Duración de la pelicula: ");
+       printf("DuraciÃ³n de la pelicula: ");
        fflush(stdin);
-       gets(&(*InfCliente).Duracion);
+       gets(&(*InfCliente).HORA);
        printf("Costo de la Funcion: ");
        fflush(stdin);
        scanf("%f",&(*InfCliente).Costo);
@@ -35,7 +35,7 @@ void guardarInfoClienteEnArchivo(FILE *Archivo, struct EntradaCine Cliente)
 {
     fprintf(Archivo,"NOMBRE DEL CLIENTE: %s \n", Cliente.Cliente);
     fprintf(Archivo,"PELICULA: %s \n ", Cliente.Pelicula);
-    fprintf(Archivo,"DURACIÓN: %s \n", Cliente.Duracion);
+    fprintf(Archivo,"DURACIÃ“N: %s \n", Cliente.HORA);
     fprintf(Archivo,"COSTO: %.2f \n", Cliente.Costo);
     fprintf(Archivo,"PUESTO DESIGNADO: %i \n", Cliente.Puesto);
     fprintf(Archivo,"COMIDA: %s \n\n", Cliente.Comida);
@@ -45,7 +45,7 @@ void Imprimirinformacion (struct EntradaCine infCliente)
 {
         printf("NOMBRE DEL CLIENTE: %s\n",infCliente.Cliente);
         printf("PELICULA: %s \n",infCliente.Pelicula);
-        printf("DURACIÓN: %s \n",infCliente.Duracion);
+        printf("DURACIÃ“N: %s \n",infCliente.HORA);
         printf("COSTO: %.2f \n",infCliente.Costo);
         printf("PUESTO DESIGNADO: %i\n",infCliente.Puesto);
         printf("COMIDA: %s\n",infCliente.Comida);
